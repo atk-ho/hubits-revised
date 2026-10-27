@@ -242,3 +242,7 @@ html,body,#app{width:100%;max-width:100%;overflow-x:hidden}
  .welcome-direct .btn.primary{margin-top:5px;min-height:34px;width:min(32vw,270px);font-size:14px}
  .welcome-direct>.muted{margin-top:5px;font-size:10px}
 }
+
+/* v0.3.6: artwork edges blend into the welcome background */
+.welcome.welcome-direct { background:radial-gradient(ellipse at 50% 39%,#062d49 0%,#061a2d 52%,#020b18 100%); }
+.welcome-direct .welcome-complete-art {border:0!important;outline:0!important;box-shadow:none!important;object-fit:contain; }
