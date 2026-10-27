@@ -1,25 +1,18 @@
-HUBITS: Revised v0.2.2 — Solo Buff Separation
+# HUBITS: Revised v0.3.0 — Solo Arcade UI
 
-- Six columns, ten rows.
-- Buffs are independent glowing overlays at grid coordinates, not attached to falling or landed blocks.
-- Clearing a block and gravity never remove a buff. Only tapping the buff activates and removes it.
-- One buff at a time, spawning roughly every 18–30 seconds.
-- New cache version.
+A free, offline-first HTML/CSS/JavaScript PWA for GitHub Pages.
 
-Upload the complete project or replace only app.js, style.css, sw.js.
+## Install from phone
+Extract the complete ZIP, upload **the files inside** to your repository root, preserving the `assets/` folder. Enable GitHub Pages from main branch / root. Open online once to cache.
 
+## What changed
+- Approved neon arcade layout: portrait board above 2×2 answers; landscape board left and questions right.
+- 6-column, 10-row board with larger glossy falling blocks and 30fps visual updates.
+- Solo hazard countdown, floating buffs, active timers and end-game confirmation.
+- Web Audio generated chiptune music and game SFX; audio begins after a user tap. Music and SFX sliders in Settings.
+- Original title artwork and installed PWA icon retained.
 
-## v0.2.4 hotfix
-- Fixed Create Offline Profile modal clicks by handling actions on `document` (modal is appended to `body`, outside `#app`).
-- Welcome screen displays the existing `assets/icon-512.png` game logo.
-- Cache version updated; profile save key is unchanged.
-
-
-v0.2.5: Borderless title artwork derived from existing icon, one title, responsive welcome screen. Existing app icon preserved.
-
-
-## v0.2.6 gameplay timing fix
-- Falling blocks now advance one cell approximately every 0.42 seconds (previously 2.6 seconds), making solo gameplay active.
-- 6 columns x 10 rows retained; settled blocks stack, and block removal triggers column gravity.
-- Floating buff icons remain independent of block clearing.
-- New versioned asset URLs and service worker cache.
+## Limitations
+- Prototype question bank and solo gameplay; online 1v1 is not implemented.
+- The UI follows the supplied reference closely, but screen proportions vary by device.
+- Existing offline profiles remain stored in browser localStorage; do not clear site data without exporting.
