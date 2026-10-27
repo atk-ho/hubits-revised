@@ -59,3 +59,6 @@
 .game-v021 .buff-orb{position:absolute;z-index:5;top:50%;left:50%;transform:translate(-50%,-50%);width:86%;height:86%;border-radius:25%;border:2px solid #fff;outline:1px solid var(--orb-color);background:linear-gradient(145deg,var(--orb-color),#101c38);color:#fff;font-weight:1000;font-size:clamp(13px,3vw,25px);text-shadow:0 2px 3px #000;box-shadow:0 0 14px var(--orb-color),inset 0 2px #ffffff88;animation:orb-pulse 1.25s ease-in-out infinite alternate;padding:0;display:grid;place-items:center;touch-action:manipulation}
 .game-v021 .buff-orb:active{filter:brightness(1.5)}
 @keyframes orb-pulse{from{opacity:.82;filter:brightness(1)}to{opacity:1;filter:brightness(1.35)}}
+
+/* v0.2.4: show the existing official game icon on the welcome screen. */
+.welcome-logo{display:block;width:clamp(112px,29vw,192px);height:auto;aspect-ratio:1;object-fit:contain;filter:drop-shadow(0 0 18px #00aaff45);border-radius:22%}

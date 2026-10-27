@@ -7,3 +7,9 @@ HUBITS: Revised v0.2.2 — Solo Buff Separation
 - New cache version.
 
 Upload the complete project or replace only app.js, style.css, sw.js.
+
+
+## v0.2.4 hotfix
+- Fixed Create Offline Profile modal clicks by handling actions on `document` (modal is appended to `body`, outside `#app`).
+- Welcome screen displays the existing `assets/icon-512.png` game logo.
+- Cache version updated; profile save key is unchanged.
