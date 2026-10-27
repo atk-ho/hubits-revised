@@ -1,0 +1,1 @@
+HUBITS Revised v0.3.2: Settings > Game Settings lets you choose 1–10 rows and 1–10 columns. Applies next match; board scales to fit screen. Wrong answer still instant-drops. All other features retained.

@@ -144,3 +144,9 @@
 @media(max-height:470px) and (orientation:landscape){
  .arcade-v030 .board{--cell:min(calc((43vw - 36px)/6),calc((100dvh - 118px)/7));}
 }
+
+/* v0.3.2: dynamic board dimensions, sized to the available viewport */
+.arcade-v030 .board{--cell:min(calc((44vw - 44px)/var(--board-cols)),calc((100dvh - 175px)/var(--board-rows)));grid-template-columns:repeat(var(--board-cols),var(--cell));grid-template-rows:repeat(var(--board-rows),var(--cell));}
+@media(max-width:700px) and (orientation:portrait){.arcade-v030 .board{--cell:min(calc((100vw - 38px)/var(--board-cols)),calc((61dvh - 90px)/var(--board-rows)));}}
+@media(orientation:landscape){.arcade-v030 .board{--cell:min(calc((43vw - 40px)/var(--board-cols)),calc((100dvh - 140px)/var(--board-rows)));}}
+@media(max-height:470px) and (orientation:landscape){.arcade-v030 .board{--cell:min(calc((43vw - 36px)/var(--board-cols)),calc((100dvh - 118px)/var(--board-rows)));}}
