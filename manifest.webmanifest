@@ -1,0 +1,17 @@
+{
+  "name": "HUBITS: Revised",
+  "short_name": "HUBITS",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#071629",
+  "theme_color": "#071629",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
