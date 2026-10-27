@@ -206,3 +206,11 @@ html,body,#app{width:100%;max-width:100%;overflow-x:hidden}
  .arcade-v030 .build-label{display:none}
 }
 @media(max-height:650px) and (orientation:portrait){.arcade-v030 .game-body{grid-template-rows:minmax(0,55fr) minmax(0,45fr)}.arcade-v030 .arcade-effects{display:none}.arcade-v030 .question-title{font-size:13px}}
+
+/* v0.3.4 — borderless title illustration, proportional centered layout */
+.welcome-shell{min-height:100svh}.welcome{height:100svh;min-height:100svh;padding:18px 14px;gap:0;justify-content:center;background:radial-gradient(ellipse at 50% 38%,#07385b 0%,#061b30 37%,#020c19 85%)}
+.welcome-art{width:min(86vw,410px,calc(43svh * 1.667));max-height:43svh;aspect-ratio:512/307;object-fit:contain;mask-image:none;-webkit-mask-image:none;filter:drop-shadow(0 0 16px #00aaff36)}
+.welcome>div:not(.muted){margin-top:-3px}.welcome .logo{font-size:clamp(24px,8.1vw,51px);letter-spacing:-.045em}.welcome .subtitle{margin-top:8px;font-size:clamp(10px,2.8vw,15px)}
+.welcome .btn.primary{width:min(69vw,310px);margin-top:clamp(35px,7svh,70px);min-height:clamp(49px,7svh,66px)}.welcome>.muted{margin-top:clamp(20px,4svh,36px)}
+@media(orientation:landscape){.welcome{padding:6px 14px}.welcome-art{width:min(35vw,235px,calc(39svh * 1.667));max-height:39svh}.welcome .logo{font-size:clamp(20px,4vw,38px)}.welcome .btn.primary{margin-top:9px;width:min(34vw,260px);min-height:36px}.welcome>.muted{margin-top:7px}}
+@media(max-height:560px) and (orientation:portrait){.welcome-art{width:min(76vw,calc(34svh * 1.667));max-height:34svh}.welcome .btn.primary{margin-top:20px}}

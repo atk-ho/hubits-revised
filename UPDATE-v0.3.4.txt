@@ -1,0 +1,1 @@
+HUBITS Revised v0.3.4: borderless artwork and centered responsive title screen. Gameplay and saves unchanged.
