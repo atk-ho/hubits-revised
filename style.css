@@ -130,3 +130,17 @@
 .arcade-v030 .game-meta{min-height:42px}
 }
 @media(max-height:470px) and (orientation:landscape){.arcade-v030{gap:3px}.arcade-v030 .arcade-top{min-height:28px}.arcade-v030 .game-meta{min-height:32px}.arcade-v030 .board{--cell:min(calc((43vw - 36px)/6),calc((100dvh - 118px)/10))}.arcade-v030 .question-panel{gap:3px;padding:5px}.arcade-v030 .question-title{font-size:14px}.arcade-v030 .answer{padding:5px}.arcade-v030 .arcade-effects{min-height:18px;padding:2px 7px}}
+
+/* v0.3.1: six full-width columns, seven fully visible rows. */
+.arcade-v030 .board{grid-template-rows:repeat(7,var(--cell));}
+.arcade-v030 .block{width:100%;height:100%;min-width:100%;min-height:100%;border-radius:5px;animation:none;box-sizing:border-box;}
+.arcade-v030 .block.falling{animation:none;will-change:transform;}
+@media (orientation:portrait){
+ .arcade-v030 .board{--cell:min(calc((100vw - 38px)/6),calc((61dvh - 90px)/7));}
+}
+@media (orientation:landscape){
+ .arcade-v030 .board{--cell:min(calc((43vw - 40px)/6),calc((100dvh - 140px)/7));}
+}
+@media(max-height:470px) and (orientation:landscape){
+ .arcade-v030 .board{--cell:min(calc((43vw - 36px)/6),calc((100dvh - 118px)/7));}
+}
