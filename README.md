@@ -41,3 +41,7 @@ A playable **early prototype**, not the complete game. Includes multiple offline
 - Landing pop, board impact, clear pixel burst, danger flash, results modal entrance and victory confetti. Respect reduced-motion preference.
 - Animations are short UI effects on landed blocks, **not yet a continuous physics-based falling block sprite**. That will require a larger game-board engine redesign.
 - On GitHub, future updates generally require replacing only `app.js`, `style.css`, `sw.js` unless stated otherwise.
+
+
+## Official icon update
+This complete package includes the approved HUBITS coding-block icon, favicon and PWA icons. Upload the extracted contents to the repository root.
