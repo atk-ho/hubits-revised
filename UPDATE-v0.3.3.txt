@@ -1,0 +1,7 @@
+HUBITS Revised v0.3.3
+- Reference-matched title spacing and responsive artwork mask.
+- Board cell size measured from actual board container to prevent clipping.
+- Compact portrait gameplay: 2x2 answers, visible board and HUD.
+- Landscape responsive board and question.
+- Keeps configurable 1-10 rows/columns, buffs, hazards, audio and instant drop.
+- Cache version updated for GitHub Pages / PWA refresh.

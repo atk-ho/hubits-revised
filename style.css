@@ -150,3 +150,59 @@
 @media(max-width:700px) and (orientation:portrait){.arcade-v030 .board{--cell:min(calc((100vw - 38px)/var(--board-cols)),calc((61dvh - 90px)/var(--board-rows)));}}
 @media(orientation:landscape){.arcade-v030 .board{--cell:min(calc((43vw - 40px)/var(--board-cols)),calc((100dvh - 140px)/var(--board-rows)));}}
 @media(max-height:470px) and (orientation:landscape){.arcade-v030 .board{--cell:min(calc((43vw - 36px)/var(--board-cols)),calc((100dvh - 118px)/var(--board-rows)));}}
+
+
+/* v0.3.3 reference-matched title and gameplay; viewport and dynamic grid safeguards */
+html,body,#app{width:100%;max-width:100%;overflow-x:hidden}
+.welcome-shell{padding:0;width:100%;max-width:none}
+.welcome{height:100dvh;min-height:0;width:100%;max-width:100%;padding:clamp(18px,4dvh,34px) clamp(12px,4vw,26px);gap:0;display:flex;flex-direction:column;justify-content:center;align-items:center;overflow:hidden;background:radial-gradient(ellipse at 50% 33%,#0b3154 0%,#06182b 44%,#020b18 100%)}
+.welcome-art{width:min(76vw,355px,calc(38dvh * 1.66));height:auto;max-height:38dvh;aspect-ratio:512/307;object-fit:contain;flex:0 0 auto;border-radius:0;filter:drop-shadow(0 0 14px #00bfff50);-webkit-mask-image:radial-gradient(ellipse 66% 73% at 50% 63%,#000 56%,transparent 98%);mask-image:radial-gradient(ellipse 66% 73% at 50% 63%,#000 56%,transparent 98%);animation:art-enter .8s ease-out both,art-float 5s ease-in-out 1s infinite alternate}
+.welcome>div:not(.muted){flex:0 0 auto;min-width:0;width:100%;margin-top:clamp(0px,1dvh,10px)}
+.welcome .logo{font-size:clamp(22px,7.5vw,47px);letter-spacing:-.045em;line-height:1.08;white-space:nowrap;text-align:center;filter:drop-shadow(0 3px 2px #00101e)}
+.welcome .logo .hubits-blue{background:linear-gradient(#fff 5%,#79e9ff 42%,#0095e7 66%,#0864b7 100%);color:transparent;background-clip:text;-webkit-background-clip:text}
+.welcome .logo .gold{background:linear-gradient(#fff1a8 0%,#ffd94b 42%,#ffae09 80%);color:transparent;background-clip:text;-webkit-background-clip:text}
+.welcome .subtitle{font-size:clamp(9px,2.5vw,14px);letter-spacing:clamp(.12em,.75vw,.3em);margin-top:8px;white-space:nowrap}
+.welcome .btn.primary{width:min(75vw,315px);min-width:0;max-width:100%;margin-top:clamp(34px,7dvh,76px);min-height:clamp(51px,8dvh,70px);font-size:clamp(15px,4vw,22px);border:2px solid #34caff;border-bottom:5px solid #0861b8;border-radius:15px;background:linear-gradient(180deg,#0ec0f8 0%,#0584e4 45%,#034ed0 100%);box-shadow:0 0 20px #007bff40,inset 0 2px #fff8;transition:transform .15s,filter .15s}
+.welcome .btn.primary:active{transform:scale(.97);filter:brightness(1.12)}
+.welcome>.muted{margin-top:clamp(19px,4dvh,39px);font-size:clamp(10px,2.7vw,13px);text-align:center;letter-spacing:.03em}
+@keyframes art-enter{from{opacity:0;transform:translateY(16px) scale(.94)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes art-float{to{transform:translateY(-5px)}}
+@media(orientation:landscape){.welcome{padding:10px;gap:0;flex-direction:column;flex-wrap:nowrap;align-content:center}.welcome-art{width:min(29vw,230px);max-height:36dvh}.welcome>div:not(.muted){flex:0 0 auto;min-width:0;margin-top:0}.welcome .logo{font-size:clamp(22px,4vw,37px)}.welcome .subtitle{margin-top:3px}.welcome .btn.primary{margin-top:10px;min-height:38px;width:min(34vw,260px)}.welcome>.muted{margin-top:8px}}
+.arcade-v030{height:100dvh;height:100svh;min-height:0;max-height:100dvh;box-sizing:border-box;overflow:hidden;gap:5px;padding:6px;isolation:isolate}
+.arcade-v030 .game-body,.arcade-v030 .board-panel,.arcade-v030 .board-wrap,.arcade-v030 .question-panel{min-width:0;min-height:0;overflow:hidden}
+.arcade-v030 .board-panel{position:relative}
+.arcade-v030 .board-wrap{width:100%;flex:1;align-items:center;justify-content:center;padding:4px}
+.arcade-v030 .board{--cell:20px;flex:0 0 auto;width:calc(var(--board-cols) * var(--cell) + 6px);height:calc(var(--board-rows) * var(--cell) + 6px);grid-template-columns:repeat(var(--board-cols),var(--cell));grid-template-rows:repeat(var(--board-rows),var(--cell));box-sizing:border-box;max-width:100%;max-height:100%;overflow:hidden}
+.arcade-v030 .cell{width:var(--cell);height:var(--cell);min-width:0;min-height:0;overflow:visible}
+.arcade-v030 .block{width:100%;height:100%;min-width:0;min-height:0;box-sizing:border-box;border-radius:clamp(2px,.7vw,6px)}
+.arcade-v030 .board-header{flex:0 0 auto;min-height:18px;position:relative;z-index:1}
+.arcade-v030 .arcade-top{min-width:0;flex-wrap:nowrap}
+.arcade-v030 .game-title{flex:1;min-width:0}
+.arcade-v030 .arcade-stat{flex:0 0 auto}
+.arcade-v030 .end-btn{flex:0 0 auto}
+.arcade-v030 .question-panel{overflow:hidden}
+.arcade-v030 .question-panel pre{flex:0 0 auto;max-height:25%;overflow:auto}
+.arcade-v030 .answers{min-height:0;overflow:hidden}
+.arcade-v030 .answer{overflow:hidden;overflow-wrap:anywhere}
+@media(orientation:portrait){
+ .arcade-v030 .game-body{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,59fr) minmax(0,41fr)}
+ .arcade-v030 .game-meta{min-height:45px}
+ .arcade-v030 .board-panel,.arcade-v030 .question-panel{padding:6px}
+ .arcade-v030 .question-panel{gap:4px}
+ .arcade-v030 .question-panel pre{max-height:25%;font-size:clamp(10px,2.8vw,13px);padding:5px}
+ .arcade-v030 .answers{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:5px}
+ .arcade-v030 .answer{font-size:clamp(11px,3vw,15px);padding:6px}
+ .arcade-v030 .arcade-effects{min-height:20px;padding:3px 7px}
+ .arcade-v030 .build-label{display:none}
+}
+@media(orientation:landscape){
+ .arcade-v030 .game-body{grid-template-columns:minmax(0,45%) minmax(0,55%);grid-template-rows:minmax(0,1fr)}
+ .arcade-v030 .board-wrap{padding:2px}
+ .arcade-v030 .question-panel{gap:3px;padding:5px}
+ .arcade-v030 .question-title{font-size:clamp(13px,2vw,19px)}
+ .arcade-v030 .question-panel pre{max-height:22%;padding:4px}
+ .arcade-v030 .answer{padding:4px 7px;font-size:clamp(11px,1.5vw,16px)}
+ .arcade-v030 .arcade-effects{display:none}
+ .arcade-v030 .build-label{display:none}
+}
+@media(max-height:650px) and (orientation:portrait){.arcade-v030 .game-body{grid-template-rows:minmax(0,55fr) minmax(0,45fr)}.arcade-v030 .arcade-effects{display:none}.arcade-v030 .question-title{font-size:13px}}
