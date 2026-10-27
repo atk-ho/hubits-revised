@@ -2,9 +2,6 @@
 
 A free, offline-first HTML/CSS/JavaScript PWA for GitHub Pages.
 
-## Install from phone
-Extract the complete ZIP, upload **the files inside** to your repository root, preserving the `assets/` folder. Enable GitHub Pages from main branch / root. Open online once to cache.
-
 ## What changed
 - Approved neon arcade layout: portrait board above 2×2 answers; landscape board left and questions right.
 - 6-column, 10-row board with larger glossy falling blocks and 30fps visual updates.
