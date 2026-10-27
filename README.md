@@ -13,3 +13,13 @@ Upload the complete project or replace only app.js, style.css, sw.js.
 - Fixed Create Offline Profile modal clicks by handling actions on `document` (modal is appended to `body`, outside `#app`).
 - Welcome screen displays the existing `assets/icon-512.png` game logo.
 - Cache version updated; profile save key is unchanged.
+
+
+v0.2.5: Borderless title artwork derived from existing icon, one title, responsive welcome screen. Existing app icon preserved.
+
+
+## v0.2.6 gameplay timing fix
+- Falling blocks now advance one cell approximately every 0.42 seconds (previously 2.6 seconds), making solo gameplay active.
+- 6 columns x 10 rows retained; settled blocks stack, and block removal triggers column gravity.
+- Floating buff icons remain independent of block clearing.
+- New versioned asset URLs and service worker cache.
