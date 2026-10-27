@@ -214,3 +214,31 @@ html,body,#app{width:100%;max-width:100%;overflow-x:hidden}
 .welcome .btn.primary{width:min(69vw,310px);margin-top:clamp(35px,7svh,70px);min-height:clamp(49px,7svh,66px)}.welcome>.muted{margin-top:clamp(20px,4svh,36px)}
 @media(orientation:landscape){.welcome{padding:6px 14px}.welcome-art{width:min(35vw,235px,calc(39svh * 1.667));max-height:39svh}.welcome .logo{font-size:clamp(20px,4vw,38px)}.welcome .btn.primary{margin-top:9px;width:min(34vw,260px);min-height:36px}.welcome>.muted{margin-top:7px}}
 @media(max-height:560px) and (orientation:portrait){.welcome-art{width:min(76vw,calc(34svh * 1.667));max-height:34svh}.welcome .btn.primary{margin-top:20px}}
+
+/* v0.3.5: exact user-supplied title composition, no duplicate title text */
+.welcome-shell {padding:0!important; width:100%; max-width:none;}
+.welcome.welcome-direct {
+  display:flex; flex-direction:column; flex-wrap:nowrap; align-items:center;
+  justify-content:center; gap:0; width:100%; height:100dvh; min-height:0;
+  overflow:hidden; box-sizing:border-box;
+  padding:clamp(12px,3dvh,26px) 12px;
+  background:radial-gradient(ellipse at 50% 38%,#07304b 0%,#061729 55%,#020b18 100%);
+}
+.welcome-direct .welcome-complete-art {
+  display:block; width:min(95vw,540px,calc(57dvh * 1.42));
+  height:auto; max-height:57dvh; object-fit:contain; flex:0 1 auto;
+  border:0; border-radius:0; box-shadow:none; filter:none; animation:none;
+  -webkit-mask-image:none; mask-image:none;
+}
+.welcome-direct .btn.primary {
+  flex:0 0 auto; width:min(68vw,330px); min-width:0;
+  min-height:clamp(49px,7dvh,66px); margin-top:clamp(16px,3.5dvh,35px);
+  font-size:clamp(15px,4vw,21px);
+}
+.welcome-direct>.muted {flex:0 0 auto;margin-top:clamp(18px,3.5dvh,35px);font-size:clamp(11px,2.7vw,14px)}
+@media(orientation:landscape) {
+ .welcome.welcome-direct{padding:5px 12px}
+ .welcome-direct .welcome-complete-art{width:min(35vw,340px,calc(60dvh * 1.42));max-height:60dvh}
+ .welcome-direct .btn.primary{margin-top:5px;min-height:34px;width:min(32vw,270px);font-size:14px}
+ .welcome-direct>.muted{margin-top:5px;font-size:10px}
+}

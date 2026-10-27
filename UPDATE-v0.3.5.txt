@@ -1,0 +1,1 @@
+v0.3.5: Uses the user-provided complete title artwork directly. No separate logo text. Responsive sizing. Gameplay unchanged.
