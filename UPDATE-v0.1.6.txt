@@ -1,0 +1,13 @@
+HUBITS: Revised v0.1.6 — changed files only
+
+Replace app.js, style.css and sw.js in the GitHub repository root.
+
+Changes:
+- Visible falling blocks animate from above the board to their landing cell.
+- Gravity compacts each column after blocks are removed, with a falling effect.
+- Correct answers remove 1 block by default.
+- New Double Clear buff: collect a ×2 block, activate buff, then the next correct answer removes 2 blocks.
+- Buff blocks have brighter glow; buff/debuff controls have clearer arcade styling.
+- Existing offline profiles, icon and audio remain unchanged.
+
+Note: this is a lightweight browser prototype. Falling blocks still resolve into grid cells rather than a fully continuous physics simulation.

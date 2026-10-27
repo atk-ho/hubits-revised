@@ -45,3 +45,10 @@ A playable **early prototype**, not the complete game. Includes multiple offline
 
 ## Official icon update
 This complete package includes the approved HUBITS coding-block icon, favicon and PWA icons. Upload the extracted contents to the repository root.
+
+
+## v0.1.5 patch
+- Gameplay: responsive compact two-column layout in portrait and landscape; question choices stay beside the block board.
+- Replaced Pause with End Game. Confirmation freezes the run; Cancel resumes. Confirm records a loss and shows the in-game result popup.
+- Updated offline cache version. Existing profiles, audio, game mechanics and official icon are preserved.
+- For existing v0.1.4 installs, replace only `app.js`, `style.css`, and `sw.js`.
